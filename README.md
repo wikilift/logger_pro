@@ -129,13 +129,13 @@ unregisterLogSink();
 
 ---
 
-## ⏱️ Time & perf
+## ⏱️ Time 
 
 ### `time: true`
 Prefix the message with `[HH:mm:ss]`:
 
 ```dart
-logi('Tick', time: true, name: 'clock');  // [12:04:33] Tick
+logi('Tick', time: true, name: 'clock');  // [12:04:33]
 ```
 
 ### `msDiff: true`
@@ -150,7 +150,7 @@ logi('Second', msDiff: true, name: 'perf'); // [HH:mm:ss] [+12.34ms] Second
 
 ---
 
-## 🔤 Colors & channels
+## Colors & channels
 
 ```dart
 logi('Saved', name: 'db', color: AnsiColor.green);
@@ -197,7 +197,7 @@ logBufAnsi(redHello, name: 'ansi-demo');
 
 ---
 
-## 🧰 API overview
+## API overview
 
 ```dart
 void logi(String message, { bool time, bool msDiff, int? sequenceNumber, int level, String name, Zone? zone, Object? error, StackTrace? stackTrace, AnsiColor? color });
@@ -216,7 +216,7 @@ bool get ansiEnabled;
 set ansiEnabled(bool value);
 ```
 
-**Kinds (`kind` field):** `logi`, `logw`, `loge`, `logd`, `hex`, `chr`, `ansi`.
+**Kinds :** `logi`, `logw`, `loge`, `logd`, `hex`, `chr`, `ansi`.
 
 ---
 
