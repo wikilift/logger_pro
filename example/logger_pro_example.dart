@@ -38,11 +38,26 @@ void main() async {
   logBufChr(buf, name: 'CHR');
 
   logi(' ANSI sequences ', name: 'example', color: AnsiColor.magenta);
-  final redHelloReset = <int>[27, 91, 51, 49, 109, ...'Hello, ANSI! (red)'.codeUnits, 27, 91, 48, 109];
+  final redHelloReset = <int>[
+    27,
+    91,
+    51,
+    49,
+    109,
+    ...'Hello, ANSI! (red)'.codeUnits,
+    27,
+    91,
+    48,
+    109,
+  ];
   logBufAnsi(redHelloReset, name: 'ansi-Demo');
 
   logi(' JSON sink capture ', name: 'example', color: AnsiColor.magenta);
-  loge('Captured by sink: CriticalFailure', name: 'MainProcess', stackTrace: StackTrace.current);
+  loge(
+    'Captured by sink: CriticalFailure',
+    name: 'MainProcess',
+    stackTrace: StackTrace.current,
+  );
 
   unregisterLogSink();
   logi('Sink unregistered. Done.', name: 'example', color: AnsiColor.magenta);

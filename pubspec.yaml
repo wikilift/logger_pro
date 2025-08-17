@@ -1,6 +1,6 @@
 name: logger_pro
 description: A robust and extensible logging library for Dart and Flutter. It provides a simple API with ANSI color support, buffer and data logging, and an abstract sink for custom backends.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/wikilift/logger_pro
 repository: https://github.com/wikilift/logger_pro
 

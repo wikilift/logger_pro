@@ -52,7 +52,12 @@ void main() {
       final error = Exception('A test error');
       final stackTrace = StackTrace.current;
 
-      loge('Something failed', error: error, stackTrace: stackTrace, name: 'TestProcess');
+      loge(
+        'Something failed',
+        error: error,
+        stackTrace: stackTrace,
+        name: 'TestProcess',
+      );
 
       expect(mockSink.lastEvent!['error'], error.toString());
       expect(mockSink.lastEvent!['stackTrace'], stackTrace.toString());

@@ -144,7 +144,9 @@ void _coreLog(
     tsPrefix = '[${_nowHHmmss()}] ';
   } else if (msDiff) {
     final last = _lastLogTimestamp;
-    final diffMs = last == null ? 0.0 : now.difference(last).inMicroseconds / 1000.0;
+    final diffMs = last == null
+        ? 0.0
+        : now.difference(last).inMicroseconds / 1000.0;
     _lastLogTimestamp = now;
     final timeStr = _nowHHmmss();
     final diffFormatted = diffMs >= 1000
@@ -155,7 +157,9 @@ void _coreLog(
 
   final baseMsg = '$tsPrefix$message';
   final coloredMsg = _ansiEnabled ? '$colorCode$baseMsg$_rst' : baseMsg;
-  final coloredName = name.isEmpty ? '' : (_ansiEnabled ? '$colorCode$name$_rst' : name);
+  final coloredName = name.isEmpty
+      ? ''
+      : (_ansiEnabled ? '$colorCode$name$_rst' : name);
 
   dev.log(
     coloredMsg,
@@ -397,7 +401,9 @@ void logBufHex(
   AnsiColor? color,
 }) {
   final bytes = buf.map((b) => (b.toInt() & 0xFF)).toList(growable: false);
-  final hexParts = bytes.map((b) => b.toRadixString(16).padLeft(2, '0').toUpperCase()).join(' ');
+  final hexParts = bytes
+      .map((b) => b.toRadixString(16).padLeft(2, '0').toUpperCase())
+      .join(' ');
   final msg = '(${bytes.length} bytes) $hexParts';
   final c = color ?? AnsiColor.cyan;
   _coreLog(
