@@ -1,5 +1,7 @@
 # logger_pro
 
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://buymeacoffee.com/wikilift)
+
 [![pub.dev](https://img.shields.io/pub/v/logger_pro.svg)](https://pub.dev/packages/logger_pro) [![Dart](https://img.shields.io/badge/dart-%3E%3D3.0.0-blue.svg)](https://dart.dev) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![GitHub stars](https://img.shields.io/github/stars/wikilift/logger_pro.svg?style=social)](https://github.com/wikilift/logger_pro)
 
 
